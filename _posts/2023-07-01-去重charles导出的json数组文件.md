@@ -3,7 +3,7 @@ categories: 数据处理
 tags: 测试 charles python
 ---
 
-# 前言
+## 前言
 
 当没有任何接口自动化基础设施建设的时候，我们测试一般就是在app上点点点，这时，我们应该如何统计这个测试过程中，涉及的接口覆盖率是多少呢？
 
@@ -18,9 +18,9 @@ tags: 测试 charles python
 1. 对导出的json数组文件进行去重
 2. 对导出的json数组文件进行分类
 
-# 去重实现
+## 去重实现
 
-## json数组结构
+### json数组结构
 
 首先，我们看一下导出的json数组的大致结构：
 
@@ -76,7 +76,7 @@ tags: 测试 charles python
 
 可以看到，json数组中的json是嵌套结构，我们接口测试中区分接口，不单单根据path字段区分用例，还需要根据query,requests.headers,request.body等，所以我们需要构造一个通用的去重方法
 
-## 去重实现初版
+### 去重实现初版
 
 ```python
 def get_dict_value(d:dict, k:str):
@@ -147,7 +147,7 @@ def unique_json_arr_file_by_fields(input_file_path, output_file_path, fields:lis
 
 ```
 
-## 去重实现优化
+### 去重实现优化
 
 考虑到文件较大，为了能处理巨大的甚至超过内存的数据量，使用ijson库将数据分布加载到内存中，维护一个group字典记录该类别分组有没有没写入过文件，代码如下：
 
@@ -189,10 +189,10 @@ def unique_large_json_arr_file_by_fields(input_file_path, output_file_path, fiel
 
 ```
 
-# 分类实现
+## 分类实现
 
 暂未实现，后续再做考虑
 
-# 展望
+## 展望
 
 导出的charles文件可以直接转成接口自动化用例的配置文件，定时执行任务进行回归验证，后端悄悄改东西导致线上bug能及时发现。
