@@ -21,7 +21,7 @@ title: 关于
 
 ### 爱好
 
-- 折纸，现代折纸发展的很不错，就是折cp图很烦
+- 折纸，现代折纸发展的很不错，就是折cp图很烦  
 贴两张作品：
 ![图 0](images/50062cdf092b5a9b941f9f99abae8acf1c0499a9248cce316761ff56dc75bcf9.png)  
 ![图 1](images/ff7e9f2a66a1ebdaec10897390ee09cff41be44ab16cdb6753210a035ec7f0db.png)  
