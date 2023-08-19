@@ -240,10 +240,6 @@ kmarkdown:
   input: GFM
 
 
-gems: [jekyll-mermaid]
-mermaid:
-  src: 'path/to/mermaid.js'
-
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
