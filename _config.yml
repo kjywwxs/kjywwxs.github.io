@@ -239,6 +239,8 @@ markdown: kramdown
 kmarkdown:
   input: GFM
 
+mermaid: true
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
