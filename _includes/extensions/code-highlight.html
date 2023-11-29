@@ -24,7 +24,7 @@
 <script>
 // Init highlight js
 document.addEventListener('DOMContentLoaded', function(event) {
-  var els = document.querySelectorAll('pre code')
+  var els = document.querySelectorAll('pre code ')
 
   function addLangData(block) {
     var outer = block.parentElement.parentElement.parentElement;
@@ -59,12 +59,22 @@ document.addEventListener('DOMContentLoaded', function(event) {
     addLangData(block);
     addBadge(block)
     hljs.highlightBlock(block);
+
   }
 
-  for (var i = 0; i < els.length; i++) {
-    var el = els[i];
-    handle(el);
-  }
+  // for (var i = 0; i < els.length; i++) {
+  //   var el = els[i];
+  //   handle(el);
+  // }
+  for (var i = 0; i < els.length; i++) {  
+  var el = els[i];  
+  // 检查元素是否有 'language-mermaid' 类  
+  if (el.classList.contains('language-mermaid')) {  
+    continue; // 跳过这次循环，不对此类进行处理  
+  }  
+  handle(el);  
+  
+}
 });
 </script>
 
