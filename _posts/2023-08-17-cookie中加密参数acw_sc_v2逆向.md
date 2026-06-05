@@ -50,7 +50,7 @@ response = requests.get('https://bm.ruankao.org.cn/sign/welcome', cookies=cookie
 
 据我所知，cookie的生成主要有两种方式
 
-1. 一种是服务端响应头中的set-cookie字段，浏览器会自动加如请求头中
+1. 一种是服务端响应头中的set-cookie字段，浏览器会自动加到请求头中
 2. js脚本中设置document.cookie
 
 接下来看一下软考网的这个cookie是怎么生成  
